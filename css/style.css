@@ -4,3 +4,11 @@
 flex-direction: row;
 flex-wrap: wrap;
   }
+
+  .nav {
+    color: whitesmoke;
+  }
+
+  card {
+    color: blue;
+  }
