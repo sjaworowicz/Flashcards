@@ -1,129 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 body{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
     background-color: whitesmoke;
   }
 
-  .button {
-    position: relative;
-    width: 150px;
-    height: 40px;
+  button{
+    padding: 8px;
+    outline: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    border: 1px solid #34974d;
-    background-color: #3aa856;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background: whitesmoke;
   }
   
-  .button, .button__icon, .button__text {
-    transition: all 0.3s;
-  }
-  
-  .button .button__text {
-    transform: translateX(30px);
-    color: #fff;
-    font-weight: 600;
-  }
-  
-  .button .button__icon {
-    position: absolute;
-    transform: translateX(109px);
-    height: 100%;
-    width: 39px;
-    background-color: #34974d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .button .svg {
-    width: 30px;
-    stroke: #fff;
-  }
-  
-  .button:hover {
-    background: #34974d;
-  }
-  
-  .button:hover .button__text {
-    color: transparent;
-  }
-  
-  .button:hover .button__icon {
-    width: 148px;
-    transform: translateX(0);
-  }
-  
-  .button:active .button__icon {
-    background-color: #2e8644;
-  }
-  
-  .button:active {
-    border: 1px solid #2e8644;
+  button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
+  .container{
+    width: 1280px;
+    margin: auto;
+  }
 
-  /* From Uiverse.io by cssbuttons-io */ 
-button {
-  width: 150px;
-  height: 50px;
-  cursor: pointer;
+  header{background-color: #fff;}
+
+#header{
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background: red;
-  border: none;
+  min-height: 70px;
+  padding: 0 20px;
+  background: #fff;
+}
+
+#header button{
+  font-family: inherit;
+  border: 1px solid red;
+}
+
+#create_card{
+  display: none;
+  width: 370px;
+  margin:auto;
+  padding: 20px;
+  margin-top: 10px;
+  background: whitesmoke;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+
+#create_card h2{
+  color: black;
+  text-align: center;
+}
+
+#create_card textarea{
+  width: 100%;
   border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-  background: #e62222;
- }
- 
- button, button span {
-  transition: 200ms;
- }
- 
- button .text {
-  transform: translateX(35px);
-  color: white;
-  font-weight: bold;
- }
- 
- button .icon {
-  position: absolute;
-  border-left: 1px solid #c41b1b;
-  transform: translateX(110px);
-  height: 40px;
-  width: 40px;
+  font-family: inherit;
+  border: 1px solid lightgray;
+  resize: none;
+}
+
+#create_card button{width: fit-content;}
+
+#flashcards{
   display: flex;
-  align-items: center;
   justify-content: center;
- }
- 
- button svg {
-  width: 15px;
-  fill: #eee;
- }
- 
- button:hover {
-  background: #ff3636;
- }
- 
- button:hover .text {
-  color: transparent;
- }
- 
- button:hover .icon {
-  width: 150px;
-  border-left: none;
-  transform: translateX(0);
- }
- 
- button:focus {
-  outline: none;
- }
- 
- button:active .icon svg {
-  transform: scale(0.8);
- }
- 
-.card{
-    background-color: aqua;
-    border: #000000 solid 1px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+
+.flashcard{
+  width: 370px;
+  height: 200px;
+  word-wrap: break-word;
+  margin: 10px; 
+  background:#fff;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
+.flashcard h2{font-size: 1rem;}
+
+.fa-minus{
+  top: 3%;
+  right: 2%;
+  position: absolute;
+  color: #1a1a1a;
+  transition: 0.3s ease-out;
+}
+
+.fa-minus:hover{color: red;}
+
+@media(max-width:1280px){
+  .container{width: 100%;}
+}
+
+@media(max-width:768px){
+  .flashcard{margin: auto;}
+
+  .flashcard{
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
+}
+
+@media(max-width:480px){
+  #header{
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #create_card{width: 95%;}
+
+  .flashcard{width: 100%;}
+}
